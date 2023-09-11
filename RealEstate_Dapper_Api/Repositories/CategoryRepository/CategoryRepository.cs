@@ -2,7 +2,7 @@
 using RealEstate_Dapper_Api.Dtos.CategoryDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
 
-namespace RealEstate_Dapper_Api.Models.Repositories.CategoryRepository
+namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
 {
     public class CategoryRepository : ICategoryRepository
     {
@@ -11,6 +11,18 @@ namespace RealEstate_Dapper_Api.Models.Repositories.CategoryRepository
         public CategoryRepository(Context context)
         {
             _context = context;
+        }
+
+        public async void CreateCategory(CreateCategoryDto categoryDto)
+        {
+            string query = "Insert Into Category (CategoryName, CategoryStatus) values (@categoryName,@categoryStatus)";
+            var parameters = new DynamicParameters();
+            parameters.Add("@categoryName", categoryDto.CategoryName);
+            parameters.Add("@categoryStatus", true);
+            using(var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);            
+            }
         }
 
         public async Task<List<ResultCategoryDto>> GetAllCategoryAsync()

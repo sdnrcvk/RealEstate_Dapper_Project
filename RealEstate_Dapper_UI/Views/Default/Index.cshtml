@@ -4,4 +4,20 @@
     Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
 
-<h2>Burası ana sayfa olacak</h2>
+@await Component.InvokeAsync("_DefaultFeatureViewComponentPartial")
+
+@await Component.InvokeAsync("_DefaultProductListViewComponentPartial")
+
+@await Component.InvokeAsync("_DefaultWhoAreViewComponentPartial")
+
+@await Component.InvokeAsync("_DefaultServicesViewComponentPartial")
+
+@await Component.InvokeAsync("_DefaultProductListExploreCitiesViewComponentPartial")
+
+@await Component.InvokeAsync("_DefaultOurClientsViewComponentPartial")
+
+@await Component.InvokeAsync("_DefaultSubFeatureViewComponentPartial")
+
+@await Component.InvokeAsync("_DefaultDiscountOfDayViewComponentPartial")
+
+@await Component.InvokeAsync("_DefaultBrandViewComponentPartial")

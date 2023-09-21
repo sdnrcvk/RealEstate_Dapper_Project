@@ -1,6 +1,6 @@
 ﻿using RealEstate_Dapper_Api.Dtos.CategoryDtos;
 
-namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
+namespace RealEstate_Dapper_Api.Repositories.CategoryRepositories
 {
     public interface ICategoryRepository
     {

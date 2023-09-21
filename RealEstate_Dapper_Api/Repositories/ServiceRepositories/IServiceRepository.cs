@@ -1,7 +1,7 @@
 ﻿using RealEstate_Dapper_Api.Dtos.CategoryDtos;
 using RealEstate_Dapper_Api.Dtos.ServiceDtos;
 
-namespace RealEstate_Dapper_Api.Repositories.ServiceRepository
+namespace RealEstate_Dapper_Api.Repositories.ServiceRepositories
 {
     public interface IServiceRepository
     {

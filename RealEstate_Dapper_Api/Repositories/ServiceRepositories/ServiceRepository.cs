@@ -3,7 +3,7 @@ using RealEstate_Dapper_Api.Dtos.CategoryDtos;
 using RealEstate_Dapper_Api.Dtos.ServiceDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
 
-namespace RealEstate_Dapper_Api.Repositories.ServiceRepository
+namespace RealEstate_Dapper_Api.Repositories.ServiceRepositories
 {
     public class ServiceRepository : IServiceRepository
     {

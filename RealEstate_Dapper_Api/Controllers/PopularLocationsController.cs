@@ -8,11 +8,11 @@ namespace RealEstate_Dapper_Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PopularLocationController : ControllerBase
+    public class PopularLocationsController : ControllerBase
     {
         private readonly IPopularLocationRepository _popularLocationRepository;
 
-        public PopularLocationController(IPopularLocationRepository popularLocationRepository)
+        public PopularLocationsController(IPopularLocationRepository popularLocationRepository)
         {
             _popularLocationRepository = popularLocationRepository;
         }

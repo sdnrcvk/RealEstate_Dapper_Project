@@ -26,7 +26,7 @@
                         <th scope="row">@item.CategoryId</th>
                         <td>@item.CategoryName</td>
                         <td>@(item.CategoryStatus ? "Aktif" : "Pasif")</td>
-                        <td><a href="" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
                         <td><a href="" class="btn btn-outline-warning">Güncelle</a></td>
                     </tr>  
                     }

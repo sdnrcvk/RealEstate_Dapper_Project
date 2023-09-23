@@ -18,9 +18,7 @@ namespace RealEstate_Dapper_UI.Controllers
         /* 
          Create, Update ->> Serialize
          List, GetById ->> Deserialize
-         
-         
-         */
+        */
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
@@ -48,6 +46,17 @@ namespace RealEstate_Dapper_UI.Controllers
             StringContent stringContent = new StringContent(jsonData,Encoding.UTF8,"application/json");
             var responseMessage = await client.PostAsync("https://localhost:44315/api/Categories",stringContent);
             if(responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            var client= _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync($"https://localhost:44315/api/Categories/{id}");
+            if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }

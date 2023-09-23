@@ -1,6 +1,6 @@
 ﻿namespace RealEstate_Dapper_UI.Dtos.WhoWeAreDetailDtos
 {
-    public class ResultWhoWeAreDetailDtos
+    public class ResultWhoWeAreDetailDto
     {
         public int WhoWeAreDetailId { get; set; }
         public string Title { get; set; }

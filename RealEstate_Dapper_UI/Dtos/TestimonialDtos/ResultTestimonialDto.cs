@@ -1,6 +1,6 @@
 ﻿namespace RealEstate_Dapper_UI.Dtos.TestimonialDtos
 {
-    public class ResultTestimonialDtos
+    public class ResultTestimonialDto
     {
         public int TestimonialId { get; set; }
         public string NameSurname { get; set; }
